@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Search, Menu, X } from 'lucide-react';
 
 const Opportunities = () => {
+  //this will be fetched from db this is for mocking data
   const jobs = [
     {
       type: 'Hybrid & Onsite Jobs',
@@ -86,11 +87,12 @@ const Opportunities = () => {
   ];
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState('');
-  const [selectedOpp, setSelectedOpp] = useState('');
+  const [selectedOption, setSelectedOption] = useState(''); //here option means dataMap options
+  const [selectedOpp, setSelectedOpp] = useState(''); //here Opp means selected opportunity or job
   const [filteredJobs, setFilteredJobs] = useState(jobs);
   const [showModal, setShowModal] = useState(false);
 
+  //this will also fetched from db , only for mocking data
   const dataMap = {
     location: ['India', 'New York', 'Los Angeles', 'Chicago', 'San Francisco'],
     industry: ['Startup', 'Big Tech', 'Government', 'Non-profit'],
